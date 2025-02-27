@@ -1,68 +1,539 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* 🌌 Arrière-plan animé futuriste */
 body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1c1e26, #3c4049);
+  color: white;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+  animation: backgroundAnimation 10s infinite alternate;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* 🌟 Effet d'animation du fond */
+@keyframes backgroundAnimation {
+  0% { background: linear-gradient(135deg, #1c1e26, #3c4049); }
+  100% { background: linear-gradient(135deg, #282c36, #4a4f5d); }
+}
+.bg-blue-600 {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
 }
 
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ✨ Ajout d'un effet de néon sur les titres */
+h1, h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
+}
+
+/* 🎇 Animation d'entrée pour les images */
+.image-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.5);
+}
+
+/* 🚀 Effet magique sur les boutons */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background: linear-gradient(45deg, #ff8c00, #ff0080);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(255, 140, 0, 0.5);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 30px rgba(255, 140, 0, 0.8);
 }
+
+/* 💎 Input futuriste */
+input {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+}
+
+/* 🛍️ Style du panier */
+.cart-container {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.5);
+}
+
+.cart-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-container li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+/* ✨ Effet lumière sur la barre de recherche */
+.search-input {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  width: 60%;
+  max-width: 400px;
+  font-size: 1rem;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+}
+/* 🎨 Style global */
+.budget-container {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: #1e1f26;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* 💰 Solde total */
+h2 {
+  font-size: 2rem;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
+}
+
+/* 📋 Formulaire d'ajout de transaction */
+.add-transaction input, .add-transaction select {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  width: 80%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.add-transaction button {
+  background: #ff9800;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-transaction button:hover {
+  background: #e68900;
+}
+
+/* 🔍 Filtre */
+.filter button {
+  background: rgba(0, 255, 255, 0.3);
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  color: white;
+}
+
+.filter button:hover {
+  background: rgba(0, 255, 255, 0.5);
+}
+
+/* 📜 Liste des transactions */
+.transactions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+.transactions-list .income {
+  background: rgba(0, 255, 0, 0.3);
+}
+
+.transactions-list .expense {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.transactions-list button {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.transactions-list button:hover {
+  background: darkred;
+}
+
+.search-input:focus {
+  border: 2px solid #00ffff;
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
+}
+
+/* 🌠 Animation d’entrée des cartes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.image-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.search-input {
+  border-radius: 25px;
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 2px solid white;
+}
+.light-theme {
+  background: linear-gradient(to bottom, #ffffff, #cccccc);
+  color: black;
+}
+.cart-btn {
+  background: #ff9800;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cart-btn:hover {
+  background: #e68900;
+}
+
+
+.dark-theme {
+  background: linear-gradient(to bottom, #2E2A35, #605C7C);
+  color: white;
+}
+
+.toggle-btn {
+  background: #ff5f5f;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-btn:hover {
+  background: #ff2e2e;
+}
+
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.search-input {
+  border-radius: 25px;
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 2px solid white;
+}
+
+.search-container {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.search-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.search-subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.search-input {
+  margin-top: 20px;
+  padding: 12px;
+  width: 60%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  color: black;
+  outline: none;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  justify-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.image-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 250px;
+  text-align: center;
+  color: black;
+  transition: transform 0.3s ease;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.image-author {
+  font-size: 0.9rem;
+  color: gray;
+  margin-top: 5px;
+}
+
+.cart-btn {
+  background: #ff9800;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cart-btn:hover {
+  background: #e68900;
+}
+.cart-container {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+  text-align: center;
+}
+
+.cart-container h2 {
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+}
+
+.expense-item {
+  background: rgba(255, 0, 0, 0.3);
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+/* 🌟 Navbar */
+.navbar {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.cart-container {
+  padding: 20px;
+  text-align: center;
+}
+/* 🌟 Conteneur principal en deux colonnes */
+.budget-content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* 📊 Graphique à gauche */
+.chart-container {
+  width: 40%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* 📝 Transactions à droite */
+.transactions-section {
+  width: 55%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* 🌟 Conteneur principal en deux colonnes */
+.budget-content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* 📊 Graphique à gauche */
+.chart-container {
+  width: 40%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+/* ✅ Conteneur des boutons */
+.type-selector {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+/* ✅ Boutons Revenu/Dépense */
+.type-selector button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* ✅ Bouton actif */
+.type-selector button.selected {
+  background: #4CAF50; /* Vert pour revenu */
+  color: white;
+  box-shadow: 0px 0px 10px rgba(76, 175, 80, 0.8);
+}
+
+/* ✅ Bouton Dépense */
+.type-selector button:nth-child(2) {
+  background: #FF5733; /* Rouge pour dépense */
+  color: white;
+  box-shadow: 0px 0px 10px rgba(255, 87, 51, 0.8);
+}
+
+/* ✅ Effet au survol */
+.type-selector button:hover {
+  opacity: 0.8;
+}
+
+
+/* 📝 Transactions à droite */
+.transactions-section {
+  width: 55%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+/* 📊 Conteneur du graphique */
+.chart-container {
+  width: 45%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+  min-height: 320px;
+}
+
+/* ✅ Ajustement des labels du graphique */
+.recharts-legend-item {
+  font-size: 14px;
+  font-weight: bold;
+}
+
